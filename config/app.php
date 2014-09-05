@@ -78,7 +78,7 @@ return [
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => 'fjkdslafsjfkldsjfkdls!!!',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -128,6 +128,8 @@ return [
 		'Illuminate\Translation\TranslationServiceProvider',
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
+
+		'Wardrobe\Drawer\DrawerServiceProvider',
 
 	],
 

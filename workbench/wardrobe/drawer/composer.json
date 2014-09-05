@@ -1,0 +1,23 @@
+{
+    "name": "wardrobe/drawer",
+    "description": "",
+    "authors": [
+        {
+            "name": "Eric Barnes",
+            "email": "eric@ericlbarnes.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.3.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Wardrobe\\Drawer\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
