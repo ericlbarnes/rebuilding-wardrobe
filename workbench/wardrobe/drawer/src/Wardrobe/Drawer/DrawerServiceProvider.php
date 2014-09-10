@@ -18,7 +18,7 @@ class DrawerServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('wardrobe/drawer');
+		$this->package('wardrobe/drawer', 'wardrobe');
 		include __DIR__.'/../../routes.php';
 	}
 

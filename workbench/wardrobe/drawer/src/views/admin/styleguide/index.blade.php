@@ -1,7 +1,10 @@
-@extends('drawer::admin.layout')
+@extends('wardrobe::admin.layout')
 
 @section('content')
   <div class="container">
-    @include('drawer::admin.modules.post-form')
+    @foreach ($modules as $file)
+        @include('wardrobe::admin.modules.'.$file)
+        <hr>
+    @endforeach
   </div>
 @stop

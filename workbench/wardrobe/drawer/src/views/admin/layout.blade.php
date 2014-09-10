@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="/packages/wardrobe/drawer/css/icons.css">
     </head>
     <body>
-        @include('drawer::admin.modules.navigation')
+        @include('wardrobe::admin.inc.navigation')
         <div class="wrapper">
             @yield('content')
         </div>
