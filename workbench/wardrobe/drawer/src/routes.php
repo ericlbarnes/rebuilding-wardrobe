@@ -3,7 +3,7 @@
 /**
  * CSS and HTML Style Guide
  */
-Route::get('/styleguide', function() {
+Route::get('/styleguide/{theme?}', function($theme = 'light') {
 
 	$modules = [];
 
@@ -13,5 +13,5 @@ Route::get('/styleguide', function() {
 		$modules[] = str_replace('.blade.php', '', $file->getFilename());
 	}
 
-	return view('wardrobe::admin.styleguide.index', compact('modules'));
+	return view('wardrobe::admin.styleguide.index', compact('theme', 'modules'));
 });
