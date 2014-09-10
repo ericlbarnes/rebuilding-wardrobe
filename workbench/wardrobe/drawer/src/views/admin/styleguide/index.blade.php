@@ -2,6 +2,6 @@
 
 @section('content')
   <div class="container">
-    <h1>Style Guide</h1>
+    @include('drawer::admin.modules.post-form')
   </div>
 @stop

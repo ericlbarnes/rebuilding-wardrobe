@@ -1,0 +1,72 @@
+nav
+  position: relative
+  overflow: hidden
+  margin: 0 auto
+  width: 100%
+  font-weight: 300
+  font-size: 1.25em
+  background: $nav-bg
+  border-bottom: 1px solid $border-color
+
+  ul
+    position: relative
+    display: flex
+    margin: 0 auto
+    padding: 0
+    max-width: 900px
+    list-style: none
+    flex-flow: row wrap
+    justify-content: center
+
+  li
+    position: relative
+    z-index: 1
+    display: block
+    margin: 0
+    text-align: center
+    flex: 1
+
+  li.active
+    border-bottom: 3px solid $nav-link-active-color
+    a
+      color: $nav-link-active-color
+
+  a
+    color: $nav-link-color
+    padding: 1em 0
+    line-height: 1
+    transition: color 0.3s, transform 0.3s
+    position: relative
+    display: block
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+    @media screen and (max-width: $bp-medium)
+      padding: .5em 0
+
+    &:hover
+      color: $nav-link-active-color
+      text-decoration: none
+
+  span
+    font-family: $base-font
+    vertical-align: middle
+    font-size: 1rem
+    font-weight: 500
+    @media screen and (max-width: $bp-medium)
+      display: none
+
+  .icon:before
+    z-index: 10
+    display: inline-block
+    margin: 0 0.4em 0 0
+    vertical-align: middle
+    text-transform: none
+    font-weight: normal
+    font-variant: normal
+    font-size: 1.3em
+    line-height: 1
+    speak: none
+    -webkit-backface-visibility: hidden
+    -webkit-font-smoothing: antialiased

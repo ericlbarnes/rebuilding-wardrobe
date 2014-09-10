@@ -1,0 +1,35 @@
+// Break points
+$bp-small: 320px
+$bp-medium: 500px
+
+// Backgrounds
+$primary-bg: #484f60
+$secondary-bg: $primary-bg
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Nunito:400,700,300)
+$base-font: 'Nunito', sans-serif
+
+// Navigation
+$nav-bg: #3d4351
+$nav-link-color: lighten( $nav-bg, 50% )
+$nav-link-active-color: lighten( $nav-bg, 30% )
+
+// Body
+$border-color: #3d4351
+
+// Imports
+@import base/normalize
+@import layout/structure
+@import modules/nav
+@import modules/forms
+@import modules/post
+
+input::-moz-placeholder,
+textarea::-moz-placeholder
+  color: #999
+
+input,
+textarea
+  background: $primary-bg
+  color: #999

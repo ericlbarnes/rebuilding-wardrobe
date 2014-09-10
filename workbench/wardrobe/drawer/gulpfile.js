@@ -5,22 +5,27 @@ var gulp = require('gulp'),
 
 var config = {
   sass: {
-    watch: './assets/sass/',
-    structure: './assets/sass/structure.sass'
+    watch: './assets/sass',
+    themes: [
+      './assets/sass/light.sass',
+      './assets/sass/dark.sass'
+    ]
   }
 }
 
 // Compile into the base laravel to prevent us from
 // having to keep publishing assets.
 gulp.task('css', function() {
-  return gulp.src(config.sass.structure)
+  config.sass.themes.forEach(function (theme) {
+    return gulp.src(theme)
     .pipe(sass({ style: 'compressed' })
       .on("error", notify.onError(function (error) {
-        return "Message to the notifier: " + error.message;
+        return "Error: " + error.message;
       })))
     .pipe(autoprefix('last 2 version'))
     .pipe(gulp.dest('../../../public/packages/wardrobe/drawer/css'))
     .pipe(gulp.dest('./public/css'));
+  })
 });
 
 // Rerun the task when a file changes

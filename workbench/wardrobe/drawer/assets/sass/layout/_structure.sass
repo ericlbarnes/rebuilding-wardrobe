@@ -1,0 +1,28 @@
+html, body
+  margin: 0
+  padding: 0
+  background-color: $primary-bg
+  font-family: $base-font
+
+.container
+  padding: 10px
+  margin: 0
+  background-color: $secondary-bg
+  // Center it for larger screens
+  @media screen and (min-width: $bp-medium)
+    width: 80%
+    margin: 20px auto
+
+.wrapper
+  border-top: 1px solid $secondary-bg
+
+a
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+  &:focus
+    outline: none
+
+input::-moz-placeholder,
+textarea::-moz-placeholder
+  color: #666

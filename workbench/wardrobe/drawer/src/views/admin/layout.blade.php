@@ -6,10 +6,15 @@
         <title>Wardrobe</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/packages/wardrobe/drawer/css/structure.css">
+        <link rel="stylesheet" href="/packages/wardrobe/drawer/css/light.css">
+        {{--<link rel="stylesheet" href="/packages/wardrobe/drawer/css/dark.css">--}}
+        <link rel="stylesheet" href="/packages/wardrobe/drawer/css/icons.css">
     </head>
     <body>
         @include('drawer::admin.modules.navigation')
-        @yield('content')
+        <div class="wrapper">
+            @yield('content')
+        </div>
+
     </body>
 </html>
