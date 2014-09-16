@@ -4,4 +4,8 @@ class Post extends Model {
 
 	protected $table = 'posts';
 
+	public function tags()
+	{
+		return $this->belongsToMany('Tag', 'post_tags');
+	}
 }

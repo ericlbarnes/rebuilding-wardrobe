@@ -14,8 +14,8 @@ class CreatePostTagsTable extends Migration {
 	{
 		Schema::create('post_tags', function($table)
 		{
-			$table->integer('id');
-			$table->string('tag');
+			$table->integer('post_id');
+			$table->integer('tag_id');
 		});
 	}
 
