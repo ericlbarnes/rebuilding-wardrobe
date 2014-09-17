@@ -20,6 +20,8 @@ class DrawerServiceProvider extends ServiceProvider {
 	{
 		$this->package('wardrobe/drawer', 'wardrobe');
 		include __DIR__.'/../../routes.php';
+
+		$this->app->singleton('Wardrobe\Drawer\Repositories\PostRepositoryInterface', 'Wardrobe\Drawer\Repositories\DbPostRepository');
 	}
 
 	/**
