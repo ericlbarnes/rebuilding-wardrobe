@@ -40,9 +40,8 @@ class DbPostRepository implements PostRepositoryInterface {
 	public function findBySlug($slug)
 	{
 		return $this->post
-			->where('active', 1)
-			->where('publish_date', '<=', new Carbon)
 			->where('slug', $slug)
+			->active()
 			->first();
 	}
 
