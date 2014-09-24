@@ -1,8 +1,26 @@
 <?php namespace App\Http\Filters;
 
-use Auth, Redirect;
+use Illuminate\Http\RedirectResponse;
 
 class GuestFilter {
+
+	/**
+	 * The authenticator implementation.
+	 *
+	 * @var Authenticator
+	 */
+	protected $auth;
+
+	/**
+	 * Create a new filter instance.
+	 *
+	 * @param  Authenticator  $auth
+	 * @return void
+	 */
+	public function __construct(Authenticator $auth)
+	{
+		$this->auth = $auth;
+	}
 
 	/**
 	 * Run the request filter.
@@ -11,9 +29,9 @@ class GuestFilter {
 	 */
 	public function filter()
 	{
-		if (Auth::check())
+		if ($this->auth->check())
 		{
-			return Redirect::to('/');
+			return new RedirectResponse(url('/'));
 		}
 	}
 

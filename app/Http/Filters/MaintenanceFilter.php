@@ -1,8 +1,27 @@
 <?php namespace App\Http\Filters;
 
-use App, Response;
+use Illuminate\Http\Response;
+use Illuminate\Contracts\Foundation\Application;
 
 class MaintenanceFilter {
+
+	/**
+	 * The application implementation.
+	 *
+	 * @var Application
+	 */
+	protected $app;
+
+	/**
+	 * Create a new filter instance.
+	 *
+	 * @param  Application  $app
+	 * @return void
+	 */
+	public function __construct(Application $app)
+	{
+		$this->app = $app;
+	}
 
 	/**
 	 * Run the request filter.
@@ -11,9 +30,9 @@ class MaintenanceFilter {
 	 */
 	public function filter()
 	{
-		if (App::isDownForMaintenance())
+		if ($this->app->isDownForMaintenance())
 		{
-			return Response::make('Be right back!');
+			return new Response('Be right back!', 503);
 		}
 	}
 
