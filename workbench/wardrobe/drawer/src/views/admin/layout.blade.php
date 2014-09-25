@@ -15,5 +15,6 @@
             @yield('content')
         </div>
 
+        <script type="text/javascript" src="/packages/wardrobe/drawer/js/app.js"></script>
     </body>
 </html>

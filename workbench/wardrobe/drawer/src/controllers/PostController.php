@@ -6,6 +6,7 @@ use Wardrobe\Drawer\Http\Requests\CreatePostRequest;
 use Wardrobe\Drawer\Repositories\PostRepositoryInterface;
 
 class PostController extends Controller {
+
 	/**
 	 * @var PostRepositoryInterface
 	 */
@@ -17,6 +18,17 @@ class PostController extends Controller {
 	public function __construct(PostRepositoryInterface $posts)
 	{
 		$this->posts = $posts;
+	}
+
+	/**
+	 * Show a list of all the posts
+	 *
+	 * @return \Illuminate\View\View
+	 */
+	public function index()
+	{
+		$posts = $this->posts->allPaged();
+		return view('wardrobe::admin.post.grid', compact('posts'));
 	}
 
 	/**

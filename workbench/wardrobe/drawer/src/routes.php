@@ -8,8 +8,8 @@ Route::group(array('prefix' => 'admin'), function() use ($wardrobeControllers) {
 });
 
 /**
- * CSS and HTML Style Guide
- */
+* CSS and HTML Style Guide
+*/
 Route::get('/styleguide/{theme?}', function($theme = 'light') {
 
 	$modules = [];

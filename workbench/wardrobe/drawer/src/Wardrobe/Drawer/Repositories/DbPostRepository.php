@@ -19,6 +19,17 @@ class DbPostRepository implements PostRepositoryInterface {
 	}
 
 	/**
+	 * Get a paged result set for all posts
+	 *
+	 * @param int $per_page
+	 * @return mixed
+	 */
+	public function allPaged($per_page = 10)
+	{
+		return $this->post->orderBy('publish_date', 'desc')->paginate($per_page);
+	}
+
+	/**
 	 * Get a Post by its primary key.
 	 *
 	 * @param  int $id

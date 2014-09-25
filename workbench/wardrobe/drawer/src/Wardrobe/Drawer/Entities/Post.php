@@ -19,6 +19,12 @@ class Post extends Model {
 	 */
 	protected $fillable = array('title', 'slug', 'content', 'image', 'type', 'link_url', 'active', 'publish_date', 'user_id');
 
+
+	public function getDates()
+	{
+		return ['created_at', 'updated_at', 'publish_date'];
+	}
+
 	/**
 	 * Set an active scope
 	 *

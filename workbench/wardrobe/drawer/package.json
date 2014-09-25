@@ -1,8 +1,9 @@
 {
   "devDependencies": {
-    "gulp": "^3.8.7",
+    "gulp": "^3.8.8",
     "gulp-autoprefixer": "0.0.10",
     "gulp-ruby-sass": "^0.7.1",
-    "gulp-notify": "^1.5.1"
+    "gulp-notify": "^1.5.1",
+    "gulp-concat": "^2.4.1"
   }
 }

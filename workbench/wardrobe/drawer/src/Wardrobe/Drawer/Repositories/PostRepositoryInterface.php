@@ -3,6 +3,14 @@
 interface PostRepositoryInterface {
 
 	/**
+	 * Get a paged result set for all posts
+	 *
+	 * @param int $per_page
+	 * @return mixed
+	 */
+	public function allPaged($per_page = 10);
+
+	/**
 	 * Get a Post by its primary key.
 	 *
 	 * @param  int   $id
