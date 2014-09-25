@@ -1,5 +1,4 @@
 $(function() {
-
     // Time conversion
     $("time").each(function(){
         var $el = $(this);
